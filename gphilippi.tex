@@ -1,9 +1,9 @@
 \section{Robótica Móvel\label{sec:robos}}
 
-Um \textit{robô móvel}, como o nome sugere, tem a habilidade de se locomover. São contrastantes com os chamados \textit{robôs industriais}, ou \textit{robôs de manipulação com base fixa}, comumente aplicados em grandes indústrias como soluções de automação --- potentes braços mecânicos empregando movimentos repetitivos, como a montagem de automóveis, aviões, montagem de componentes eletrônicos, pintura e outros.  São diversos os tipos de robôs móveis: podem viajar em ambientes fechados, no solo, na superfície de fluidos, por baixo de fluidos, no ar e até no espaço. Essa capacidade de mobilidade fez destes soluções para vários problemas complicados de engenharia, elevando consideravelmente a pesquisa da área nas últimas décadas \cite{mobileRobotsCook}.
+Um \textit{Robô Móvel} é contrastante com os chamados \textit{Robôs Industriais}, ou \textit{Robôs de Manipulação com Base Fixa}, comumente aplicados em grandes indústrias como soluções de automação --- potentes braços mecânicos empregando movimentos repetitivos, como a montagem de automóveis, aviões, montagem de componentes eletrônicos, pintura e outros.  São diversos os tipos de robôs móveis: podem viajar em ambientes fechados, no solo, na superfície de fluidos, por dentro de fluidos, no ar e até no espaço. Essa capacidade de mobilidade fez destes soluções para vários problemas complicados de engenharia, elevando consideravelmente a pesquisa da área nas últimas décadas \cite{mobileRobotsCook}.
 \\
 
-Existem várias classificações diferentes para robôs móveis \cite{mobileRobotsTzafestas} (veja a Figura~\ref{fig:robosmoveis}). Robôs terrestres são distinguidos principalmente por \textit{Robôs Móveis com Rodas} (WMRs, do inglês \textit{Wheeled Mobile Robots}) e \textit{Robôs Móveis com Pernas} (LMRs, de \textit{Legged Mobile Robots}). Também existem os \textit{Veículos Aéreos Não Tripulados} (VANTs, ou UAVs de \textit{Unmanned Aerial Vehicles}, popularmente conhecidos como \textit{drones}) e os \textit{Veículos Subaquáticos Autônomos} (AUVs, de \textit{Autonomous Underwater Vehicles}). 
+Existem várias classificações diferentes para robôs móveis \cite{mobileRobotsTzafestas} (veja a Figura~\ref{fig:robosmoveis}). Robôs terrestres são distinguidos principalmente por \textit{Robôs Móveis com Rodas} (WMRs, do inglês \textit{Wheeled Mobile Robots}) e \textit{Robôs Móveis com Pernas} (LMRs, de \textit{Legged Mobile Robots}). Também existem os \textit{Veículos Aéreos Não Tripulados} (VANTs, ou UAVs de \textit{Unmanned Aerial Vehicles}, popularmente conhecidos como \textit{Drones}) e os \textit{Veículos Subaquáticos Autônomos} (AUVs, de \textit{Autonomous Underwater Vehicles}). 
 
 \begin{figure}[H]
 	\begin{center}
@@ -15,7 +15,7 @@ Existem várias classificações diferentes para robôs móveis \cite{mobileRobo
 
 Os WMRs são muito populares devido sua baixa complexidade mecânica e pouco consumo de energia \cite{mobileRobotsWheeled}, porém, os VANTs ganharam parte interessante do mercado devido o barateamento pela fabricação em escala industrial e grande interesse da população. Há empresas, por exemplo, aplicando a utilização de VANTs como soluções de logística para entregas \cite{dronesAmazon}. Uma interessante apresentação histórica da evolução dos robôs móveis é feita em \cite{mobileRobotsTzafestas}.
 
-De qualquer forma, como nesse texto tem-se um interesse geral por robôs móveis, não necessariamente limitados a uma aplicação específica, recorrentemente os abstrairemos como \textit{sensores}. Veja, como geralmente robôs móveis devem executar suas tarefas de forma autônoma, é de extrema importância para sua supervisão, funcionamento e controle o conhecimento de suas posições \cite{mobileRobotsCook}. Uma vez que estabelece-se uma coordenada de destino, é de extrema importância que estes utilizem de seus conjuntos de sensores para se localizar e estabilizar sua navegação.
+De qualquer forma, como nesse texto tem-se um interesse geral por robôs móveis, não necessariamente limitados a uma aplicação específica, recorrentemente os abstrairemos como \textit{Sensores}. Como geralmente robôs móveis devem executar suas tarefas de forma autônoma, é de extrema importância para sua supervisão, funcionamento e controle o conhecimento de suas posições. Uma vez que estabelece-se uma coordenada de destino, é de extrema importância que estes utilizem de seus conjuntos de sensores para se localizar e estabilizar sua navegação.
 
 \subsection{Sensores}
 Variados tipos de sensores são comumente empregados para auxiliar na locomoção de robôs \cite{sensorsForMobileRobots}. Existem sensores de controle local, que auxiliam na locomoção do robô, garantindo que este se mantenha no melhor trajeto e não cause danos a si mesmo ou ao ambiente ao seu redor; e existem os sensores de controle global, que orientam o robô no espaço.
@@ -23,25 +23,24 @@ Variados tipos de sensores são comumente empregados para auxiliar na locomoçã
 	\item \textbf{Controle Local}
 	\subitem \textbf{À distância:} Utilizados para determinar a presença (e estimar distância) de obstáculos e objetos sólidos no geral. Pode-se mencionar sensor infra-vermelho, de ultrassom, radar, radar laser e sistemas de visão computacional como exemplos; 
 	\subitem \textbf{Por contato ou proximidade:} Informam a presença de um objeto ao alcance do robô. Alguns exemplos são bumbers, switches, animal whiskers, sensores eletromagnéticos, indutivos e capacitivos.
-	\subitem \textbf{De deslocamento e velocidade:} Possibilitam a predição da posição e orientação \textit{relativa} do robô. Sensores de inércia (giroscópio e acelerômetros), odômetros (encoders ópticos ou por contato; contadores de giro), sensores de efeito doppler, trilateração não ancorada e sensores baseados em visão computacional também são comuns.
+	\subitem \textbf{De deslocamento e velocidade:} Possibilitam a predição da posição e \textit{Orientação} \textit{Relativa} do robô. Sensores de inércia (giroscópio e acelerômetros), odômetros (encoders ópticos ou por contato; contadores de giro), sensores de efeito doppler, trilateração não ancorada e sensores baseados em visão computacional também são comuns.
 	\item \textbf{Controle Global}
-	\subitem \textbf{De posição e orientação: } Determinam a posição e orientação \textit{absoluta} do robô. Módulos de GPS (Sistema de Posicionamento Global, trilateração por satélites), bússolas, módulos de trilateração usando âncoras, visão computacional (indoor) e guias fixas pré-estabelecidas (como faixas pintadas no chão) são técnicas muito empregadas.
+	\subitem \textbf{De posição e orientação: } Determinam a posição e \textit{Orientação} \textit{Absoluta} do robô. Módulos de GPS (Sistema de Posicionamento Global, trilateração por satélites), bússolas, módulos de trilateração usando âncoras, visão computacional (indoor) e guias fixas pré-estabelecidas (como faixas pintadas no chão) são técnicas muito empregadas.
 \end{itemize}
 
 Nota-se que visão computacional pode ser aplicada para resolver vários dos problemas de engenharia envolvendo navegação autônoma. De fato, é com essa técnica que muitos dos animais se baseia para a locomoção. Infelizmente, esta ainda é uma solução muito custosa computacionalmente, se tornando inviável para a muitas aplicações embarcadas \cite{bayro2010geometric} e que necessitam de um controle em tempo real (críticas).
 \\
 
-Em específico, nesse texto, interessa aplicar conceitos de Geometria de Distâncias no controle de \textit{posicionamento absoluto} de um robô móvel. Para isso, baseando em \cite{eren2004rigidity} e \cite{savvides2001dynamic}, define-se o problema como um grafo ponderado $G = (V,E,d)$, onde $V$ é formado pelo conjunto de sensores no espaço e $E$ define o conjunto de sensores que estão hábeis a se comunicar, respeitando suas limitações, e as distâncias entre si.
+Em específico, nesse texto, interessa aplicar conceitos de Geometria de Distâncias no controle de \textit{Posicionamento Absoluto} de um robô móvel. Para isso, baseando em \cite{eren2004rigidity} e \cite{savvides2001dynamic}, define-se o problema como um grafo ponderado $G = (V,E,d)$, onde $V$ é formado pelo conjunto de sensores no espaço e $E$ define o conjunto de sensores que estão hábeis a se comunicar, respeitando suas limitações, e as distâncias entre si.
 
 \subsection{Como medir distâncias\label{sec:sensores}}
 
-Os métodos mais populares para estimar distância entre dois sensores são \cite{savvides2001dynamic}: \textit{Indicador de força de sinal recebido} (RSSI, de \textit{Receibed Signal Strenght Indicator}) e \textit{Métodos baseados em tempo}.
-\\
+Os métodos mais populares para estimar distância entre dois sensores são: \textit{Indicador de Força de Sinal Recebido} (RSSI, de \textit{Receibed Signal Strenght Indicator}) e \textit{Métodos Baseados em Tempo} \cite{savvides2001dynamic}.
 
 \subsubsection{Intensidade de Sinal}
 Seja por fio ou não, a comunicação entre sensores móveis é feita por ondas eletromagnéticas que tem sua potência alterada entre o envio e recebimento. Isso se dá pois a intensidade de um sinal eletromagnético $I$ é definido como a potência da fonte $P$ sobre área de propagação $A$, i.e., $I = \frac{P}{A}$ \cite{moysesEletromag}. Supondo que se utilize comunicação sem fio, então o sinal é propagado pelo ar em todas as direções. Como estamos no $\mathbb{R}^3$, a área de propagação do sinal é a superfície da esfera com centro na fonte, ou seja, 
 $$ A(r) = 2\int_0^{\frac{\pi}{2}} 2\pi\; r^2 \cos(\theta) \; d\theta \ = \ 4\pi r^2 \ \Rightarrow \ I = \frac{P}{4\pi r^2} $$
-Por tanto, a intensidade de sinal recebido é inversamente proporcional ao quadrado da distância entre a fonte do sinal e o receptor. Fixando a potência do transmissor e medindo a intensidade do sinal recebido, pode-se estimar a distância $r$. Esse é o processo baseado em RSSI.
+Portanto, a intensidade de sinal recebido é inversamente proporcional ao quadrado da distância entre a fonte do sinal e o receptor. Fixando a potência do transmissor e medindo a intensidade do sinal recebido, pode-se estimar a distância $r$. Esse é o processo baseado em RSSI.
 \\
 
 Savvides \textit{et al}. \cite{savvides2001dynamic} desenvolveram um protótipo para testar a eficiência desse método e, infelizmente, não obtiveram bons resultados. Constataram que existem muitas fontes de interferência na intensidade do sinal eletromagnético, implicando em muitas condições sobre o funcionamento. Por exemplo, a estimativa muda se houver obstáculos entre os sensores, se estiverem em um ambiente fechado ou aberto, se houver vegetação e se houver diferença de altura.
@@ -58,7 +57,7 @@ Outra caraterística da comunicação entre dois sensores é que há um tempo pa
 	\label{fig:ultrasonico}
 \end{figure}
 
-Os métodos de estimar distâncias baseados em tempo são conhecidos por \textit{tempo de chegada} (ToA, de \textit{Time-of-Arrival}) e \textit{diferença de tempo de chagada} (TDoA, \textit{Time-Difference-of-Arrival}) \cite{savvides2001dynamic}. 
+Os métodos de estimar distâncias baseados em tempo são conhecidos por \textit{Tempo de Chegada} (ToA, de \textit{Time-of-Arrival}) e \textit{Diferença de Tempo de Chagada} (TDoA, \textit{Time-Difference-of-Arrival}). 
 \\
 
 Pode-se utilizar a transmissão de dois sinais simultâneos com velocidades diferentes e conhecidas para estimar distâncias. É o que se faz, por exemplo, para saber a que distância um trovão caiu. Quando um trovão aparece, dois sinais com velocidades diferentes são enviados: um sinal luminoso (que viaja a velocidade da luz) e um sinal sonoro (que viaja a velocidade do som).
@@ -75,7 +74,7 @@ Medindo a diferença entre o recebimento dos dois sinais, faz-se a estimativa da
 Savvides \textit{et al}. \cite{savvides2001dynamic} construíram outro protótipo, chamado Medusa, utilizando deste princípio. Para grandes distâncias, infelizmente, a utilização de sensores ultrassônicos mostrou-se ser um problema \cite{sensorsForMobileRobots}. Porém, para pequenas distâncias os resultados foram promissores, com precisões de dois centímetros para sensores separados por três metros.
 \\
 
-Em curtas distâncias, por tanto, utilizar métodos baseados em atraso do tempo de recebimento mostrou-se uma boa alternativa frente aos métodos de medição da intensidade do sinal. 
+Em curtas distâncias, portanto, utilizar métodos baseados em atraso do tempo de recebimento mostrou-se uma boa alternativa frente aos métodos de medição da intensidade do sinal. 
 
 \subsection{Sobre o conjunto de sensores}
 
